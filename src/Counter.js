@@ -14,6 +14,11 @@ export class Counter extends React.Component{
                     count:state.count + (this.props.incAmount),
                 }
             })
+
+            if(this.state.count > 10*this.props.initialValue){
+                this.setState({count : this.props.initialValue})
+            }
+
             }, this.props.incInterval)
     }
     render(){
