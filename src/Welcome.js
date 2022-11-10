@@ -5,7 +5,7 @@ export class Welcome extends React.Component{
     render(){
         return(
             <div>
-                <p>Welcome, {nameGreet}</p>
+                <p>Welcome, {nameGreet}!</p>
                 <Age age={28} />
             </div>
         )
@@ -13,4 +13,4 @@ export class Welcome extends React.Component{
 }
 
 const name = "Melissa"
-const nameGreet = <p>Welcome, <strong>{name}</strong>!</p>
+const nameGreet = <strong>{name}</strong>
