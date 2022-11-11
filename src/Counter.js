@@ -23,6 +23,12 @@ export class Counter extends React.Component{
         clearInterval(this._interval);
     }
 
+    componentDidUpdate(prevProps, prevState){
+        if(prevState.count > 10*this.props.initialValue){
+            this.setState({count : this.props.initialValue})
+        }
+    }
+
     render(){
         return <CounterDisplay count={this.state.count}/>
     }
