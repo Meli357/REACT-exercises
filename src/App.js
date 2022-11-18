@@ -4,16 +4,18 @@ import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 import { ClickTracker } from "./ClickTracker";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 export class App extends React.Component{
     render(){
         return(
             <div>
-                <Hello />
+                {/* <Hello />
                 <Welcome age={28} name={"John"}/>
                 <Counter />
                 <ClickCounter />
-                <ClickTracker />
+                <ClickTracker /> */}
+                <InteractiveWelcome />
             </div>
         )
     }
