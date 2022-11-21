@@ -17,8 +17,12 @@ export class Login extends React.Component{
         })
     }
 
-    componentDidUpdate(){
-        console.log(this.state)
+    handleResetBtn = () => {
+        this.setState({
+            username : '',
+            password : '',
+            remember : false,
+        })
     }
 
     render(){
@@ -28,6 +32,7 @@ export class Login extends React.Component{
                 <input name="username" value={this.state.username} onChange={this.handleAllInputs} />
                 <input name="password" value={this.state.password} type="password" onChange={this.handleAllInputs} />
                 <input name="remember" checked={this.state.remember} type="checkbox" onChange={this.handleAllInputs} />
+                <button onClick={this.handleResetBtn}>Reset</button>
             </div>
         )
     }
