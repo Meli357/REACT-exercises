@@ -21,7 +21,7 @@ export class App extends React.Component{
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 <UncontrolledLogin />
-                <Colors names={['purple','gray','brown']}/>
+                <Colors items={['purple','gray','brown']}/>
             </div>
         )
     }
