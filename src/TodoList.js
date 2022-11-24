@@ -20,6 +20,12 @@ export class TodoList extends React.Component{
         this.state.items.push(this.state.input)
     }
 
+    handleReset = () => {
+        this.setState({
+            items : []
+        })
+    }
+
     render(){
         return(
             <div>
@@ -29,6 +35,7 @@ export class TodoList extends React.Component{
                 </ul>
                 <input name="input" value={this.state.input} onChange={this.handleInput}/>
                 <button onClick={this.handleBtn}>add a new color!</button>
+                <button onClick={this.handleReset}>delete colors!</button>
             </div>
         )
     }
