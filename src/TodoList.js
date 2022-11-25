@@ -25,13 +25,21 @@ export class TodoList extends React.Component{
             items : []
         })
     }
+    
+    handleItem = (index) =>{
+        this.setState({
+            items: this.state.items.filter(function(e,i){
+                return i !== index;
+            })
+        });
+    }
 
     render(){
         return(
             <div>
                 <ul>
                     {this.state.items.map((item, index)=>
-                    <li key={index}>{item}</li>)}
+                    <li key={index}>{item} <button onClick={this.handleItem.bind(this, index)}>delete me!</button></li>)}
                 </ul>
                 <input name="input" value={this.state.input} onChange={this.handleInput}/>
                 <button onClick={this.handleBtn}>add a new color!</button>
