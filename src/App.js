@@ -19,9 +19,9 @@ export class App extends React.Component{
                 <ClickCounter />
                 <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
-                <Login />
-                {/* <UncontrolledLogin />
-                <TodoList /> */}
+                {/* <Login /> */}
+                {/* <UncontrolledLogin /> */}
+                <TodoList />
             </div>
         )
     }

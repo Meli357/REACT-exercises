@@ -1,4 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .welcome{
     background-color: rgb(186, 132, 237);
     border: 3px solid rgb(115, 68, 68);
+}
+
+button {
+    border: 1px solid #04AA6D;
+    padding: 5px;
+    border-radius: 10px;
+    margin : 2px;
+  }
+
+button:hover {
+    background-color: #04AA6D;
+}
+
+input {
+    border: 1px solid #23A289;
+    margin : 5px;
 }

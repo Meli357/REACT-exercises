@@ -37,9 +37,9 @@ export class TodoList extends React.Component{
     render(){
         return(
             <div>
-                <ul>
+                <ul role="list" className="marker:text-sky-400 list-disc pl-5 space-y-3">
                     {this.state.items.map((item, index)=>
-                    <li key={index}>{item} <button onClick={this.handleItem.bind(this, index)}>delete me!</button></li>)}
+                    <li key={index}>{item} <button class="bg-sky-500 hover:bg-sky-700 ..." onClick={this.handleItem.bind(this, index)}>delete me!</button></li>)}
                 </ul>
                 <input name="input" value={this.state.input} onChange={this.handleInput}/>
                 <button onClick={this.handleBtn}>add a new color!</button>
