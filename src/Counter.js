@@ -30,7 +30,15 @@ export class Counter extends React.Component{
     }
 
     render(){
-        return <CounterDisplay count={this.state.count}/>
+        const Style = {
+            color : '#B5523D',
+            backgroundColor : '#FFA07A',
+            padding : '5px',
+            textAlign : 'center',
+        }
+        return (< div style={Style}>
+        <CounterDisplay count={this.state.count}/>
+        </div>)
     }
 }
 
