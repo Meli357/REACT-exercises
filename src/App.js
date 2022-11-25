@@ -13,14 +13,14 @@ import { Container } from "./Container";
 export class App extends React.Component{
     render(){
         return(
-            <Container>
+            <Container title="My app" >
                 {/* <Hello /> */}
                 <Welcome age={28} name={"John"}/>
                 {/* <Counter />
                 <ClickCounter />
                 <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
-                <Login />
+                {/* <Login /> */}
                 {/* <UncontrolledLogin />
                 <TodoList /> */}
             </Container>
