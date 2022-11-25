@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class ClickCounter extends React.Component{
     state ={
@@ -15,7 +17,7 @@ export class ClickCounter extends React.Component{
         return(
             <div>
                 <h3>Count : {this.state.count}</h3>
-                <button onClick={this.handleClickCounter}>Add</button>
+                <Button variant="success" onClick={this.handleClickCounter}>Add</Button>{' '}
             </div>
         )
     }

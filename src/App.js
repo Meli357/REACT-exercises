@@ -15,9 +15,9 @@ export class App extends React.Component{
             <div>
                 {/* <Hello /> */}
                 <Welcome age={28} name={"John"}/>
-                {/* <Counter />
+                {/* <Counter /> */}
                 <ClickCounter />
-                <ClickTracker /> */}
+                {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 <Login />
                 {/* <UncontrolledLogin />
