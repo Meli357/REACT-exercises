@@ -8,11 +8,12 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
+import { Container } from "./Container";
 
 export class App extends React.Component{
     render(){
         return(
-            <div>
+            <Container>
                 {/* <Hello /> */}
                 <Welcome age={28} name={"John"}/>
                 {/* <Counter />
@@ -22,7 +23,7 @@ export class App extends React.Component{
                 <Login />
                 {/* <UncontrolledLogin />
                 <TodoList /> */}
-            </div>
+            </Container>
         )
     }
 }
