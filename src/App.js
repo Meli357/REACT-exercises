@@ -13,15 +13,15 @@ export class App extends React.Component{
     render(){
         return(
             <div>
-                {/* <Hello />
+                {/* <Hello /> */}
                 <Welcome age={28} name={"John"}/>
-                <Counter />
+                {/* <Counter />
                 <ClickCounter />
                 <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
-                <UncontrolledLogin />
-                <TodoList />
+                {/* <UncontrolledLogin />
+                <TodoList /> */}
             </div>
         )
     }
