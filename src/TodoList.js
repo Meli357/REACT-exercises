@@ -38,7 +38,7 @@ export class TodoList extends React.Component{
         return(
             <div>
                 <ul>
-                    {this.props.render(this.state.items,this.handleItem)}
+                    {this.props.children(this.state.items,this.handleItem)}
                 </ul>
                 <input name="input" value={this.state.input} onChange={this.handleInput}/>
                 <button onClick={this.handleBtn}>add a new color!</button>

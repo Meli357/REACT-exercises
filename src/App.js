@@ -22,12 +22,13 @@ export class App extends React.Component{
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
-                <TodoList render={(items, handleItem)=> {
-                    return(<div>
+                <TodoList>
+                    {(items, handleItem)=> {
+                     return(<div>
                         {items.map((item, index)=><li key={index}>{item} 
                         <button onClick={handleItem.bind(this, index)}>
                         delete me!</button></li>)}
-                        </div>)}}>
+                        </div>)}}
                 </TodoList>
             </Container>
         )
