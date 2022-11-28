@@ -15,14 +15,20 @@ export class App extends React.Component{
         return(
             <Container title="My app" >
                 {/* <Hello /> */}
-                <Welcome age={28} name={"John"}/>
+                <Welcome age={28} name="John"/>
                 {/* <Counter />
                 <ClickCounter />
                 <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
-                {/* <UncontrolledLogin />
-                <TodoList /> */}
+                {/* <UncontrolledLogin /> */}
+                <TodoList render={(items, handleItem)=> {
+                    return(<div>
+                        {items.map((item, index)=><li key={index}>{item} 
+                        <button onClick={handleItem.bind(this, index)}>
+                        delete me!</button></li>)}
+                        </div>)}}>
+                </TodoList>
             </Container>
         )
     }
