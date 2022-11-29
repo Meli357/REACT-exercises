@@ -10,6 +10,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { Language } from "./Language";
+import { Sum } from "./Sum";
 
 export class App extends React.Component{
     render(){
@@ -32,6 +33,7 @@ export class App extends React.Component{
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList>
+                <Sum numbers={[1,2,3,4]} />
             </Container>
             </div> 
         )
