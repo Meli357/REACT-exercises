@@ -33,7 +33,7 @@ export class App extends React.Component{
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList>
-                <Sum numbers={[1,2,3,4]} />
+                <Sum />
             </Container>
             </div> 
         )
