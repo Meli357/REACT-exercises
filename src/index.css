@@ -1,4 +1,16 @@
 .welcome{
-    background-color: rgb(186, 132, 237);
-    border: 3px solid rgb(115, 68, 68);
+    background-color: rgb(132, 103, 160);
+    border: 3px solid rgb(88, 40, 40);
+    text-align: center;
+}
+
+.container{
+    background-color: #ffffff;
+    border: 3px solid #FF2500;
+}
+.container-title{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
 }
