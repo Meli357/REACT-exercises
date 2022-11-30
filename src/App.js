@@ -20,19 +20,19 @@ export class App extends React.Component{
             <Container title="My app">
                 {/* <Hello /> */}
                 <Welcome age={28} name="John"/>
-                {/* <Counter />
+                {/* <Counter /> */}
                 <ClickCounter />
-                <ClickTracker /> */}
+                {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
-                <TodoList render={(items, handleItem)=> {
+                {/* <TodoList render={(items, handleItem)=> {
                     return(<div>
                         {items.map((item, index)=><li key={index}>{item} 
                         <button onClick={handleItem.bind(this, index)}>
                         delete me!</button></li>)}
                         </div>)}}>
-                </TodoList>
+                </TodoList> */}
                 <Sum />
             </Container>
             </div> 
