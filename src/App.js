@@ -20,11 +20,12 @@ export class App extends React.Component{
             <Container title="My app">
                 {/* <Hello /> */}
                 <Welcome age={28} name="John"/>
+                <br />
                 {/* <Counter /> */}
-                <ClickCounter />
+                {/* <ClickCounter /> */}
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
-                {/* <Login /> */}
+                <Login />
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList render={(items, handleItem)=> {
                     return(<div>
