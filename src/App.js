@@ -21,7 +21,7 @@ export class App extends React.Component{
                 {/* <Hello /> */}
                 <Welcome age={28} name="John"/>
                 <br />
-                {/* <Counter /> */}
+                <Counter />
                 <ClickCounter onCounterChange={(counter)=> {
                     return console.log("The value of the counter is " + counter)}}/>
                 {/* <ClickTracker /> */}
