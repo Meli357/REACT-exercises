@@ -22,10 +22,11 @@ export class App extends React.Component{
                 <Welcome age={28} name="John"/>
                 <br />
                 {/* <Counter /> */}
-                {/* <ClickCounter /> */}
+                <ClickCounter onCounterChange={(counter)=> {
+                    return console.log("The value of the counter is " + counter)}}/>
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
-                <Login />
+                {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList render={(items, handleItem)=> {
                     return(<div>
