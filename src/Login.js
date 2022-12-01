@@ -26,7 +26,7 @@ export function Login(){
         })
     }
     
-    console.log(data)
+    // console.log(data)
 
     const StyleBtn ={
                 backgroundColor : data.password.length < 8 ? 'red' : 'green',
