@@ -23,9 +23,9 @@ export class App extends React.Component{
                 {/* <Hello /> */}
                 <Welcome age={28} name="John"/>
                 
-                <Counter />
-                {/* <ClickCounter onCounterChange={(counter)=> {
-                    return console.log("The value of the counter is " + counter)}}/> */}
+                {/* <Counter /> */}
+                <ClickCounter onCounterChange={(counter)=> {
+                    return console.log("The value of the counter is " + counter)}}/>
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
@@ -37,6 +37,7 @@ export class App extends React.Component{
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList> */}
+                <br></br>
                 <GithubUserList />
                 <GithubUser username="Meli357"/>
                 <Sum />
