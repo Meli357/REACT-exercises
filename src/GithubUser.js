@@ -15,7 +15,7 @@ export function GithubUser({username}){
         
     },[username])
 
-    return <div><h3>USERNAME: {data.name}</h3></div>
+    return <div>{data && <h3>USERNAME : {data.name}</h3>} </div>
        
 
 }
