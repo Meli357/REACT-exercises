@@ -11,19 +11,20 @@ import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { Language } from "./Language";
 import { Sum } from "./Sum";
+import { GithubUser } from "./GithubUser";
 
-export class App extends React.Component{
-    render(){
+export function App(){
+    
         return(
             <div>
             <Language />
             <Container title="My app">
                 {/* <Hello /> */}
                 <Welcome age={28} name="John"/>
-                <br />
+                
                 <Counter />
-                <ClickCounter onCounterChange={(counter)=> {
-                    return console.log("The value of the counter is " + counter)}}/>
+                {/* <ClickCounter onCounterChange={(counter)=> {
+                    return console.log("The value of the counter is " + counter)}}/> */}
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
@@ -35,9 +36,10 @@ export class App extends React.Component{
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList> */}
+                <GithubUser username="Meli357"/>
                 <Sum />
             </Container>
             </div> 
         )
-    }
+    
 }
