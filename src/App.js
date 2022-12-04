@@ -12,9 +12,10 @@ import { Container } from "./Container";
 import { Language } from "./Language";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubList";
 
-export function App(){
-    
+export class App extends React.Component{
+    render(){
         return(
             <div>
             <Language />
@@ -36,10 +37,11 @@ export function App(){
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList> */}
+                <GithubUserList />
                 <GithubUser username="Meli357"/>
                 <Sum />
             </Container>
             </div> 
         )
-    
+    }
 }
