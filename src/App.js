@@ -13,6 +13,7 @@ import { Language } from "./Language";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubList";
+import { CarDetails } from "./CarDetails";
 
 export class App extends React.Component{
     render(){
@@ -29,7 +30,7 @@ export class App extends React.Component{
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 <br></br>
-                <Login />
+                {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList render={(items, handleItem)=> {
                     return(<div>
@@ -38,10 +39,11 @@ export class App extends React.Component{
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList> */}
-                <br></br>
                 <GithubUserList />
                 <GithubUser username="Meli357"/>
-                <Sum />
+                <CarDetails initialData={{model: 'Mercedes', year: '2008', color: 'black'}}/>
+                {/* <Sum /> */}
+                <br></br>
             </Container>
             </div> 
         )
