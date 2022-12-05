@@ -5,8 +5,9 @@
 }
 
 .container{
-    background-color: #ffffff;
-    border: 3px solid #FF2500;
+    background-color: #cd9292;
+    border: 3px solid #95473a;
+    padding:5px;
 }
 .container-title{
     font-weight: bold;

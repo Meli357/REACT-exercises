@@ -24,6 +24,7 @@ export function App(){
         <Container>
             <Routes>
                 <Route path="/" element={<Welcome name="Melissa"/>}/>
+                <Route path="/counter" element={<ClickCounter />}/>
             </Routes>
         </Container>
     </div>
