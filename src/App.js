@@ -18,11 +18,17 @@ import { FilteredList } from "./FilteredList";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
+import { Link } from "react-router-dom";
 
 export function App(){
 
     return <div>
-        <Container>
+        <Container className=".container-title" title={<div>
+            <h1>My app 🙂</h1>
+            <div>
+             <Link to="/">Home🏡</Link> | <Link to="/counter">Counter⌚</Link> | <Link to="/users/:username">User🚹</Link>
+            </div>
+            </div>} >
             <Routes>
                 <Route path="/" element={<Welcome name="Melissa"/>}/>
                 <Route path="/counter" element={<ClickCounter />}/>
