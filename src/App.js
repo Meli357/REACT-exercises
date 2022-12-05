@@ -15,23 +15,34 @@ import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubList";
 import { CarDetails } from "./CarDetails";
 import { FilteredList } from "./FilteredList";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 
-export class App extends React.Component{
-    render(){
-        return(
-            <div>
-            <Language />
-            <Container title="My app">
-                {/* <Hello /> */}
-                <Welcome age={28} name="John"/>
-                
+export function App(){
+
+    return <div>
+        <Container>
+            <Routes>
+                <Route path="/" element={<Welcome name="Melissa"/>}/>
+            </Routes>
+        </Container>
+    </div>
+}
+
+// export class App extends React.Component{
+//     render(){
+//         return(
+//             <div>
+            {/* <Language /> */}
+            {/* <Container title="My app">
+               <Welcome age={28} name="John"/> */}
+                {/* <Hello /> */} 
                 {/* <Counter /> */}
-                <ClickCounter onCounterChange={(counter)=> {
-                    return console.log("The value of the counter is " + counter)}}/>
+                {/* <ClickCounter onCounterChange={(counter)=> {
+                    return console.log("The value of the counter is " + counter)}}/> */}
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
-                <br></br>
-                <FilteredList />
+                {/* <FilteredList /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList render={(items, handleItem)=> {
@@ -41,13 +52,12 @@ export class App extends React.Component{
                         delete me!</button></li>)}
                         </div>)}}>
                 </TodoList> */}
-                <GithubUserList />
+                {/* <GithubUserList />
                 <GithubUser username="Meli357"/>
-                <CarDetails initialData={{model: 'Mercedes', year: '2008', color: 'black'}}/>
+                <CarDetails initialData={{model: 'Mercedes', year: '2008', color: 'black'}}/> */}
                 {/* <Sum /> */}
-                <br></br>
-            </Container>
-            </div> 
-        )
-    }
-}
+            {/* </Container> */}
+            {/* </div>  */}
+//         )
+//     }
+// }
