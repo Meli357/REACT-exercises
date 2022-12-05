@@ -14,6 +14,7 @@ import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubList";
 import { CarDetails } from "./CarDetails";
+import { FilteredList } from "./FilteredList";
 
 export class App extends React.Component{
     render(){
@@ -30,6 +31,7 @@ export class App extends React.Component{
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
                 <br></br>
+                <FilteredList />
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList render={(items, handleItem)=> {
