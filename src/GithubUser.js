@@ -16,6 +16,7 @@ export function useGithubUser(username){
         }catch(error){
             setError(null)
             setData(null)
+            setLoading(false)
         }finally {
             setLoading(false)
         }
@@ -25,11 +26,13 @@ export function useGithubUser(username){
         fetchGithubUser(username)
     },[username])
 
-    return {data,loading,error}
+    return {data,loading,error,fetchGithubUser}
 }
 
 export function GithubUser({username}){
-    const{data,loading,error}= useGithubUser(username)
+    const{data,loading,error,fetchGithubUser}= useGithubUser(username)
+
+    useEffect(()=>{fetchGithubUser(username)},[username])
     
     return <div>
         {data && <h3>USERNAME: {data.name}</h3>} 
