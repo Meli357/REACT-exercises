@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 
-export function Login(){
+export function useLogin(){
     const[data, setData]= useState({
         username : '',
         password : '',
@@ -25,8 +25,21 @@ export function Login(){
             remember : false,
         })
     }
+
+    function onLogin(){
+        console.log(data)
+    }
     
-    // console.log(data)
+    return{
+        data:data,
+        onInputs:handleAllInputs,
+        toResetBtn:handleResetBtn,
+        onLogin:onLogin
+    }
+}
+
+export function Login(){
+    const {data,onInputs,toResetBtn,onLogin}=useLogin()
 
     const StyleBtn ={
                 backgroundColor : data.password.length < 8 ? 'red' : 'green',
@@ -34,10 +47,10 @@ export function Login(){
 
     return(
     <form>Form : 
-        <input onChange={handleAllInputs} value={data.username} name="username" />
-        <input onChange={handleAllInputs} value={data.password} name="password" type="password" />
-        <input onChange={handleAllInputs} checked={data.remember} name="remember" type="checkbox" />
-        <button disabled={data.disabled} style={StyleBtn}>Login</button>
-        <button onClick={handleResetBtn}>Reset</button>
+        <input onChange={onInputs} value={data.username} name="username" />
+        <input onChange={onInputs} value={data.password} name="password" type="password" />
+        <input onChange={onInputs} checked={data.remember} name="remember" type="checkbox" />
+        <button disabled={data.disabled} style={StyleBtn} onClick={onLogin}>Login</button>
+        <button onClick={toResetBtn}>Reset</button>
     </form>)
 }

@@ -28,7 +28,8 @@ export class App extends React.Component{
                     return console.log("The value of the counter is " + counter)}}/>
                 {/* <ClickTracker /> */}
                 {/* <InteractiveWelcome /> */}
-                {/* <Login /> */}
+                <br></br>
+                <Login />
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList render={(items, handleItem)=> {
                     return(<div>
