@@ -27,9 +27,9 @@ export function useClickCounter(initialValue=0){
 export function ClickCounter(props,{initialValue=0}){
     const {counter,onIncrement,onReset,onDecrement}=useClickCounter(initialValue)
 
-    useEffect(()=>{
-        props.onCounterChange(counter) ; 
-    },[counter])
+    // useEffect(()=>{
+    //     props.onCounterChange(counter) ; 
+    // },[counter])
 
     return(<div>
         <h3>Count:{counter}</h3>
