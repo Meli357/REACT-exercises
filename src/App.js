@@ -17,6 +17,7 @@ import { CarDetails } from "./CarDetails";
 import { FilteredList } from "./FilteredList";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App(){
 
@@ -25,6 +26,7 @@ export function App(){
             <Routes>
                 <Route path="/" element={<Welcome name="Melissa"/>}/>
                 <Route path="/counter" element={<ClickCounter />}/>
+                <Route path="/users/:username" element={<ShowGithubUser />} /> 
             </Routes>
         </Container>
     </div>
