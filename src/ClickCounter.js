@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useCallback } from "react";
 
-export class ClickCounter extends React.Component{
-    state ={
-        count:0
+export function useClickCounter(initialValue=0){
+    const[counter,setCounter]= useState(initialValue)
+
+    const handleCounterAdd = useCallback(function handleCounterAdd(){
+        setCounter((c)=>c+1)
+    }, [])
+
+    const handleCounterUnadd = useCallback(function handleCounterUnadd(){
+        setCounter((c)=>c-1)
+    }, [])
+
+    const handleCounterReset = useCallback(function handleCounterReset(){
+        setCounter(initialValue)
+    }, [initialValue])
+
+    return{
+        counter:counter,
+        onIncrement:handleCounterAdd,
+        onDecrement:handleCounterUnadd,
+        onReset:handleCounterReset
     }
-    handleClickCounter =()=>{
-        this.setState((state)=>{
-            return{
-                count:state.count + 1,
-            }
-        })
-    }
-    render(){
-        return(
-            <div>
-                <h3>Count : {this.state.count}</h3>
-                <button onClick={this.handleClickCounter}>Add</button>
-            </div>
-        )
-    }
+} 
+
+export function ClickCounter(props,{initialValue=0}){
+    const {counter,onIncrement,onReset,onDecrement}=useClickCounter(initialValue)
+
+    useEffect(()=>{
+        props.onCounterChange(counter) ; 
+    },[counter])
+
+    return(<div>
+        <h3>Count:{counter}</h3>
+        <button onClick={onIncrement}>Add</button>
+        <button onClick={onReset}>Reset</button>
+        <button onClick={onDecrement}>Subtract</button>
+    </div>)
 }
