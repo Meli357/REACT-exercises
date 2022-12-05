@@ -33,6 +33,8 @@ export function App(){
                 <Route path="/" element={<Welcome name="Melissa"/>}/>
                 <Route path="/counter" element={<ClickCounter />}/>
                 <Route path="/users/:username" element={<ShowGithubUser />} /> 
+
+                <Route path="*" element={<div><p>Page not found</p></div>} />
             </Routes>
         </Container>
     </div>
