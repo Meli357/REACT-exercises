@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useCallback } from "react";
 
 export function useClickCounter(initialValue=0){
     const[counter,setCounter]= useState(initialValue)
 
-    function handleCounterAdd(){
+    const handleCounterAdd = useCallback(function handleCounterAdd(){
         setCounter((c)=>c+1)
-    }
+    }, [])
 
-    function handleCounterUnadd(){
+    const handleCounterUnadd = useCallback(function handleCounterUnadd(){
         setCounter((c)=>c-1)
-    }
+    }, [])
 
-    function handleCounterReset(){
+    const handleCounterReset = useCallback(function handleCounterReset(){
         setCounter(initialValue)
-    }
+    }, [initialValue])
 
     return{
         counter:counter,
