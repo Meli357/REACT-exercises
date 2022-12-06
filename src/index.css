@@ -31,3 +31,11 @@
     background-color: #905c53;
     color: bisque;
 }
+
+.link{
+    text-decoration: none;
+}
+
+.link:hover{
+    color: blueviolet;
+}

@@ -7,6 +7,6 @@ export function ShowGithubUser(){
 
     return(<div>
         <GithubUser username={username} />
-        <Link to="/users">Back</Link>
+        <Link className="link" to="/users">Back</Link>
     </div>)
 }
