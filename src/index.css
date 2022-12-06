@@ -1,8 +1,11 @@
+*{
+    font-family: cursive;
+}
+
 .welcome{
     background-color: rgb(132, 103, 160);
     border: 3px solid rgb(88, 40, 40);
     text-align: center;
-    font-family:cursive;
     font-size: 20px;
 }
 
@@ -16,5 +19,15 @@
     font-size: 20px;
     text-align: center;
     padding: 5px;
-    font-family:cursive;
+}
+
+.input, .btn{
+    border-radius: 5px;
+    padding:5px;
+    color:rgb(121, 27, 126);
+}
+
+.btn:hover{
+    background-color: #905c53;
+    color: bisque;
 }

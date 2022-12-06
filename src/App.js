@@ -23,20 +23,24 @@ import { Link } from "react-router-dom";
 export function App(){
 
     return <div>
-        <Container className=".container-title" title={<div>
+       <Container className=".container-title" title={<div>
             <h1>My app 🙂</h1>
             <div>
              <Link to="/">Home🏡</Link> | <Link to="/counter">Counter⌚</Link> | <Link to="/users/:username">User🚹</Link>
             </div>
             </div>} >
+            <br></br>    
             <Routes>
                 <Route path="/" element={<Welcome name="Melissa"/>}/>
                 <Route path="/counter" element={<ClickCounter />}/>
-                <Route path="/users/:username" element={<ShowGithubUser />} /> 
+                {/* <Route path="/users/:username" element={<ShowGithubUser />} />  */}
+                <Route path="/users" element={<GithubUserList />}>
+                    <Route path=":username" element={<ShowGithubUser />} />
+                </Route>
 
                 <Route path="*" element={<div><p>Page not found</p></div>} />
             </Routes>
-        </Container>
+       </Container>
     </div>
 }
 

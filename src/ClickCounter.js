@@ -33,8 +33,8 @@ export function ClickCounter(props,{initialValue=0}){
 
     return(<div>
         <h3>Count:{counter}</h3>
-        <button onClick={onIncrement}>Add</button>
-        <button onClick={onReset}>Reset</button>
-        <button onClick={onDecrement}>Subtract</button>
+        <button className="btn" onClick={onIncrement}>Add</button>
+        <button className="btn" onClick={onReset}>Reset</button>
+        <button className="btn" onClick={onDecrement}>Subtract</button>
     </div>)
 }

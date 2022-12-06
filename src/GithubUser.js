@@ -37,8 +37,9 @@ export function GithubUser({username}){
     const{data,loading,error}= useGithubUser(username)
     
     return <div>
-        {data && <h3>USERNAME: {data.name}</h3>} 
+        {data && <h3>{data.name}</h3>} 
         {loading && <h2>Loading...</h2>}
         {error && <h2>There has been an error</h2>}
         </div>
 }
+//fix error :( ?
